@@ -1,0 +1,355 @@
+*, *::after, *::before {
+    box-sizing: border-box;
+}
+
+.search {
+    width: 100%;
+    display: flex;
+}
+  
+.searchTerm {
+    width: 100%;
+    border: 3px solid rgb(7, 152, 150);
+    border-right: none;
+    padding: 5px;
+    height: 36px;
+    border-radius: 5px 0 0 5px;
+    outline: none;
+    color: #9DBFAF;
+}
+  
+.searchTerm:focus{
+    color: rgb(7, 152, 150);
+}
+
+.searchButton {
+    width: 40px;
+    height: 36px;
+    border: 1px solid rgb(7, 152, 150);
+    background: rgb(7, 152, 150);
+    text-align: center;
+    color: #fff;
+    border-radius: 0 5px 5px 0;
+    cursor: pointer;
+    font-size: 20px;
+}
+  
+.wrap{
+    width: 25%;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0px;
+    background-color: rgb(215, 215, 215);
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 30px;
+    background-color: rgb(255, 255, 255);
+    padding-bottom: 30px;
+}
+
+header h1 {
+    text-transform: uppercase;
+    color: rgb(7, 152, 150);
+    margin: 0px;
+}
+
+header form {
+    flex-basis: 20%;
+    position: relative;
+}
+
+header input {
+    height: 40px;
+    width: 100%;
+    border: 4px solid black;
+    border-radius: 30px;
+}
+
+header form button {
+    border: none;
+    background-color: rgba(90, 56, 13, 0);
+    height: 40px;
+    width: 40px;
+    position: absolute;
+
+}
+
+header form button img {
+    width: 20px;
+}
+
+nav {
+    background-color: rgb(39, 39, 39);
+    padding: 0px 30px;
+    display: flex;
+    flex-direction: row;
+}
+
+nav div {
+    font-size: 20px;
+    color: white;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    padding: 0px 20px;
+
+    transition: all .5s;
+}
+
+nav div:hover {
+    border-left: 1px solid white;
+    border-right: 1px solid white;
+}
+
+nav div p {
+    margin: 0px;
+}
+
+
+
+#current-weather {
+    background-color: rgb(246, 246, 246);
+    margin: 30px 30px;
+    padding-bottom: 40px;
+}
+
+#current-weather #date {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 40px;
+}
+
+#current-weather #date h2, #current-weather #date p {
+    text-transform: uppercase;
+    color: rgb(10, 177, 175);
+    font-size: 18px;
+}
+
+#current-weather #main-info {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+#current-weather #main-info img {
+    width: 150px;
+}
+
+#current-weather #main-info div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#current-weather #main-info strong {
+    font-size: 60px;
+    font-weight: 300;
+}
+
+#current-weather #main-info p {
+    margin: 5px;
+    font-size: larger;
+    color: rgb(88, 88, 88);
+}
+
+#current-weather #main-info .time {
+    display: flex;
+    flex-direction: row;
+}
+
+#current-weather #main-info .time div {
+    display: flex;
+    align-items: flex-start;
+}
+
+#current-weather #main-info .time div p {
+    margin: 5px;
+}
+
+
+
+#hourly-weather {
+    background-color: rgb(246, 246, 246);
+    margin: 30px 30px;
+    padding: 10px 30px 40px 40px;
+}
+
+#hourly-weather h2 {
+    text-transform: uppercase;
+    color: rgb(10, 177, 175);
+    font-size: 18px;
+}
+
+#hourly-weather h3 {
+    text-transform: uppercase;
+}
+
+#hourly-weather #hourly-container {
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+#hourly-weather #hourly-container>div:nth-child(1) p {
+    color: rgb(156, 156, 156);
+}
+
+#hourly-weather hr {
+    width: 150px;
+}
+
+.m-auto {
+    margin-top: auto;
+}
+
+#hourly-weather #hourly-container>div {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    font-size: 20px;
+}
+
+#hourly-weather #hourly-container>div h3 {
+    margin-right: 10px;
+}
+#hourly-weather #hourly-container:nth-child(1) {
+    justify-content: flex-start;
+}
+
+#hourly-weather #hourly-container .hourly-img {
+    width: 100px;
+    height: 80px;
+    margin-bottom: 50px;
+    margin-top: 30px;
+}
+
+#hourly-weather #hourly-container .hourly-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+#nearby-places {
+    background-color: rgb(246, 246, 246);
+    margin: 30px 30px;
+    padding: 10px 30px 40px 40px;
+}
+
+#nearby-places h2 {
+    text-transform: uppercase;
+    color: rgb(10, 177, 175);
+    font-size: 18px;
+}
+
+#nearby-places>div {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+
+}
+
+#nearby-places>div>div {
+    background-color: rgb(232, 232, 232);
+    margin: 5px;  
+    display: flex;
+    align-items: center;
+    padding: 0px 40px;
+}
+
+#nearby-places .small-nearby-img {
+    width: 70px;
+    height: 70px;
+    margin-left: auto;
+}
+
+#nearby-places .small-nearby-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+#nearby-places>div>div h3 {
+    font-size: x-large;
+    font-weight: 200;
+}
+
+#nearby-places>div>div p {
+    font-size: x-large;
+    margin: 0px;
+    margin-left: 20px;
+}
+
+.hidden {
+    display: none;
+}
+
+
+
+#five-day-forecast {
+    background-color: rgb(246, 246, 246);
+    margin: 30px 30px;
+}
+
+#five-day-container {
+    display: flex;
+    justify-content: center;
+    align-items: stretch;
+}
+
+#five-day-forecast #five-day-container>div {
+    flex-basis: 25%;
+    padding: 30px;
+    border: 1px solid rgb(215, 215, 215);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    transition: all .5s;
+}
+
+#five-day-forecast #five-day-container>div:hover, #five-day-forecast #five-day-container>div:active {
+    background-color: white;
+}
+
+#five-day-forecast #five-day-container p {
+    margin-bottom: 0;
+}
+
+#five-day-forecast #five-day-container div h3 {
+    text-transform: uppercase;
+    color: rgb(10, 177, 175);
+    font-size: 18px;
+    margin-top: 0;
+}
+
+#five-day-forecast #five-day-container div .day-week {
+    text-transform: uppercase;
+    color: rgb(124, 124, 124);
+}
+
+#five-day-forecast #five-day-container div strong {
+    font-size: 48px;
+    font-weight: 200;
+}
+
+#five-day-forecast #five-day-container div .weather-week {
+    color: rgb(124, 124, 124);
+    font-size: large;
+}
+
+#five-day-forecast #five-day-container div div {
+    width: 150px;
+    height: 150px;
+}
+
+#five-day-forecast #five-day-container div div img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}

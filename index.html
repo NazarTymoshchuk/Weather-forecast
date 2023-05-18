@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Weather</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+</head>
+<body>
+    <header>
+        <h1>Weather</h1>
+        <div class="wrap">
+            <div class="search">
+               <input id="search-txt" type="text" class="searchTerm" placeholder="What are you looking for?">
+               <button id="search-btn" type="submit" class="searchButton">
+                 <i class="fa fa-search"></i>
+              </button>
+            </div>
+         </div>
+    </header>
+
+    <nav>
+        <div id="today-btn"><p>Today</p></div>
+        <div id="5-day-btn"><p>5-day forecast</p></div>
+    </nav>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.1/moment.min.js" integrity="sha512-qTXRIMyZIFb8iQcfjXWCO8+M5Tbc38Qi5WzdPOYZHIlZpzBHG3L3by84BBBOiRGiEb7KKtAOAs5qYdUiZiQNNQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+    <main id="main-today">
+        <div id="current-weather">
+            <div id="date">
+                <h2>current weather</h2>
+                <p id="current-date"></p>
+            </div>
+            <div id="main-info">
+                <div>
+                    <img id="img-weather" src="./images/Clear.png" alt="">
+                    <p id="weather"></p>
+                </div>
+                <div>
+                    <strong id="main-temp"></strong>
+                    <p id="real-feel"></p>
+                </div>
+                <div class="time">
+                    <div>
+                        <p>Sunrise:</p>
+                        <p>Sunset:</p>
+                        <p>Duration:</p>
+                    </div>
+                    <div>
+                        <p id="sunrise"></p>
+                        <p id="sunset"></p>
+                        <p id="duration"></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div id="five-day-forecast" class="hidden">
+            <div id="five-day-container">
+            </div>
+        </div>
+
+        <div id="hourly-weather">
+            <h2>hourly</h2>
+            <div id="hourly-container"></div>
+        </div>
+
+        <div id="nearby-places">
+            <h2>nearby places</h2>
+            <div id="nearby-weather">
+            </div>
+        </div>
+    </main>
+
+    
+
+    <script src="./js.js"></script>
+</body>
+</html>
